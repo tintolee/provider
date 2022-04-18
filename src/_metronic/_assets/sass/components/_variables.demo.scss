@@ -1,0 +1,33 @@
+//
+// Override global variables
+//
+
+// Theme colors
+$primary:       									#f89534;
+$primary-hover:    									#f89534dd;
+$primary-light:    									#f8953433;
+$primary-inverse:  									#FFFFFF;
+
+$secondary:                                         #019065;
+$secondary-hover:                                   #019065dd;
+$secondary-light:                                   #01906533;
+$secondary-inverse:                                 #ffffff;
+$success:                                           $secondary;
+$success-light:                                     $secondary-light;
+
+$tertiary:                                          #06a5ba;
+$tertiary-hover:                                    #06a5badd;
+$tertiary-light:                                    #06a5ba33;
+$tertiary-inverse:                                 #ffffff;
+
+$quaternary:                                        #9f3334;
+$quaternary-hover:                                  #9f3334dd;
+$quaternary-light:                                  #9f333433;
+$quaternary-inverse:                                #ffffff;
+$danger:                                            $quaternary;
+$danger-light:                                      $quaternary-light;
+
+$quinary:       									#f7b633;
+$quinary-hover:    									#f7b633dd;
+$quinary-light:    									#f7b63333;
+$quinary-inverse:  									#FFFFFF;

@@ -1,0 +1,91 @@
+#routemap-svg {
+  position: relative;
+
+  .cls-1,
+  .cls-2,
+  .cls-3,
+  .cls-0 {
+    fill: none;
+    stroke: $primary;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+  }
+
+  pattern > image {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .blog-group:hover {
+    .blog-circle,
+    .blog-image {
+      r: 18;
+
+      &.milestone {
+        r: 20;
+      }
+    }
+    .blog-text {
+      font-size: 24px;
+    }
+  }
+
+  circle {
+    stroke: $primary;
+    stroke-width: 2px;
+    z-index: 100;
+    transition: all 0.25s;
+    cursor: pointer;
+
+    &.image-circle {
+      &:hover {
+        r: 18;
+      }
+    }
+
+    &.blog-circle {
+      fill: $primary;
+    }
+
+    &.milestone {
+      stroke: $secondary;
+      stroke-width: 2px;
+    }
+
+    &.video-circle {
+      fill: $tertiary;
+    }
+  }
+
+  .blog-text {
+    fill: white;
+    text-transform: uppercase;
+    font-family: $font-family-base;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+
+  .blog-div {
+    fill: #f89534;
+    transition: all 0.25s;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .type {
+    font-size: 5px;
+    opacity: 0.5;
+  }
+
+  .date {
+    font-size: 3.5px;
+    opacity: 0.5;
+  }
+
+  #arrow {
+    fill: $primary;
+  }
+}

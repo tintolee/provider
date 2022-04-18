@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "cm2provider10f62bc4": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "s3f0e35107": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.text {
+  padding: 0px;
+  margin: 0px;
+}
+
+.unread {
+  background-color: #f64e60;
+  border-radius: 100%;
+  color: #fff;
+  height: 20px;
+  width: 20px;
+  padding: auto;
+  line-height: 20px;
+  text-align: center;
+  font-size: 9px;
+}
+.receivedMsg {
+  background-color: #c9f7f5;
+  padding: 16px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 3px;
+  max-width: 70%;
+  color: #8c8299;
+}
+.sentMsg {
+  background-color: #e1e9ff;
+  padding: 16px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 3px;
+  max-width: 70%;
+  color: #8c8299;
+  margin-left: auto;
+}
+.textAreaInput {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  padding: 10px;
+  &:focus {
+    outline: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  margin-left: 10px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ededed;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+}
