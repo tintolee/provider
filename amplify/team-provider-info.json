@@ -106,5 +106,23 @@
         "cm2provider10f62bc4": {}
       }
     }
+  },
+  "pryme": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cm2provider-pryme-113800-authRole",
+      "UnauthRoleArn": "arn:aws:iam::712691200111:role/amplify-cm2provider-pryme-113800-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::712691200111:role/amplify-cm2provider-pryme-113800-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-cm2provider-pryme-113800-deployment",
+      "UnauthRoleName": "amplify-cm2provider-pryme-113800-unauthRole",
+      "StackName": "amplify-cm2provider-pryme-113800",
+      "StackId": "arn:aws:cloudformation:eu-west-1:712691200111:stack/amplify-cm2provider-pryme-113800/22ae60b0-c15f-11ec-8e74-061f78b18a69",
+      "AmplifyAppId": "d25wjfvzegfqfu"
+    },
+    "categories": {
+      "auth": {
+        "cm2provider10f62bc4": {}
+      }
+    }
   }
 }

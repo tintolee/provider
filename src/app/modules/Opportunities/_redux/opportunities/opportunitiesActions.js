@@ -51,21 +51,25 @@ export const fetchOpportunity = (id) => (dispatch) => {
 };
 
 export const createOpportunity = (opportunityForCreation) => (dispatch) => {
-  console.log("dispatching")
+
+  delete opportunityForCreation?.url
+console.log('location data')
+  console.log(opportunityForCreation)
+
   dispatch(actions.startCall({ callType: callTypes.action }));
+  console.log('before sending')
   return requestFromServer
     .createOpportunity(opportunityForCreation)
     .then((response) => {
-      console.log(response);
-
       const { opportunity } = response.data.createOpportunity;
-      dispatch(actions.opportunityCreated({ opportunity }));
+      console.log(opportunity)
+
+      // dispatch(actions.opportunityCreated({ opportunity }));
     })
     .catch((error) => {
       console.log(error);
-
       error.clientMessage = "Can't create opportunity";
-      dispatch(actions.catchError({ error, callType: callTypes.action }));
+      // dispatch(actions.catchError({ error, callType: callTypes.action }));
     });
 };
 

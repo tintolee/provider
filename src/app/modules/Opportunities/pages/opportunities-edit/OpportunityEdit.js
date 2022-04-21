@@ -159,29 +159,6 @@ export function OpportunityEdit({
 
     if (Object.values(errors).every((val) => val === "valid")) {
       if (values.coverPhoto?.name) {
-        console.log(values.coverPhoto);
-        const visibility = "provider";
-        const { identityId } = await Auth.currentCredentials();
-        const filename = `${visibility}/${identityId}/${Date.now()}-${
-          values.coverPhoto.name
-        }`;
-        const uploadedFile = await Storage.put(filename, values.coverPhoto, {
-          contentType: values.coverPhoto.type,
-          progressCallback: (progress) => {
-            const percent = Math.round(
-              (progress.loaded / progress.total) * 100
-            );
-            setPercentUploaded(percent);
-          },
-        });
-        input.cover = {
-          key: uploadedFile.key,
-          bucket: awsAppConfig.aws_user_files_s3_bucket,
-          region: awsAppConfig.aws_project_region,
-        };
-      }
-      console.log("no errors");
-      if (!id) {
         let formData = new FormData();
         formData.append("file", imagePreview);
         formData.append("upload_preset", "r4v1flgt");
@@ -191,9 +168,11 @@ export function OpportunityEdit({
         };
         fetch("https://api.Cloudinary.com/v1_1/drt1ulcak/image/upload", options)
           .then((res) => res.json())
-          .then((res) => (input.url = res.secure_url))
+          .then((res) => (input.cover = res.secure_url))
           .catch((err) => console.log(err));
-
+      }
+      console.log("no errors");
+      if (!id) {
         dispatch(actions.createOpportunity(input)).then(() => {
           setLoading(false);
           backToOpportunitiesList("created");
@@ -476,7 +455,7 @@ export function OpportunityEdit({
                   </div>
                 )}
               </div>
-              <div className="opportunity-details">
+              <div className="opportunity-details"> 
                 <p
                   className="font-size-sm mb-2"
                   style={{ fontSize: wrapper?.current?.offsetWidth / 25 }}

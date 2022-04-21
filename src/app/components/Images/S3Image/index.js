@@ -28,7 +28,7 @@ export default function ImageS3({ photo, ...props }) {
         <img
           alt=''
           src={imageSource}
-          {...props}
+          {...props}  
           onError={() => setImageLoaded(true)}
         />
       )}
