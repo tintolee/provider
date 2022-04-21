@@ -142,7 +142,7 @@ export function ContentEdit({
         setLoading(false);
         initContent = {
           id: undefined,
-          title: '',
+          title: '',  
           type: 'Photo',
           description: '',
           blogTitle: '',
