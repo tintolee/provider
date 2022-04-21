@@ -56,8 +56,9 @@ export function ContentEditForm({
   btnRef,
   saveContent,
   percentUploaded,
+  setImagePreview,
+  imagePreview
 }) {
-  const [imagePreview, setImagePreview] = useState("");
   const [contentType, setContentType] = useState("");
 
   var initialValues = content;
@@ -87,6 +88,8 @@ export function ContentEditForm({
 
   const onPhotoPickChange = async ({ file }, fieldName, callback) => {
     try {
+
+      console.log(file)
       const config = {
         maxWidth: 500,
         maxHeight: 500,

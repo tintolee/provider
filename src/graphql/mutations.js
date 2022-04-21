@@ -5160,11 +5160,7 @@ export const createContent = /* GraphQL */ `
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto {
-          bucket
-          region
-          key
-        }
+        blogCoverPhoto
         visibility
       }
       photo {

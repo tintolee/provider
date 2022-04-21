@@ -87,7 +87,7 @@ export const createContent = contentForCreation => dispatch => {
             dispatch(actions.contentCreated({ content }));
         })
         .catch(error => {
-            console.log(error);
+            console.log(error); 
             error.clientMessage = "Can't create content";
             dispatch(actions.catchError({ error, callType: callTypes.action }));
         });

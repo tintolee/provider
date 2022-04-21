@@ -48,6 +48,7 @@ export function ContentEdit({
   const [loading, setLoading] = useState(false);
   const [percentUploaded, setPercentUploaded] = useState(0);
   const dispatch = useDispatch();
+  const [imagePreview, setImagePreview] = useState("");
   const { actionsLoading, contentForEdit, user } = useSelector(
     (state) => ({
       actionsLoading: state.contents.actionsLoading,
@@ -56,6 +57,22 @@ export function ContentEdit({
     }),
     shallowEqual
   );
+
+
+  const uploadFile= async (filedata)=>{
+    let formData = new FormData();
+    formData.append("file", filedata);
+    formData.append("upload_preset", "r4v1flgt");
+    const options = {
+      method: "POST",
+      body: formData,
+    };
+   const upload =  await fetch("https://api.Cloudinary.com/v1_1/drt1ulcak/image/upload", options)
+      .then((res) => res.json())
+      .then((res) =>  res.secure_url)
+      .catch((err) => console.log(err));
+      return upload
+  }
 
   useEffect(() => {
     initContent.opportunityProvider.id = user.providerId;
@@ -89,27 +106,16 @@ export function ContentEdit({
       opportunityProviderUserId: values.createdBy.id,
       video: '',
     };
+    console.log('loggin type')
+    console.log(values.type)
 
     if (values.type === 'Photo') {
       const visibility = 'provider';
       const { identityId } = await Auth.currentCredentials();
-      const filename = `${visibility}/${identityId}/${Date.now()}-${
-        values.photo.name
-      }`;
+      console.log('photo typess')
 
-      const uploadedFile = await Storage.put(filename, values.photo, {
-        contentType: values.photo.type,
-        progressCallback: (progress) => {
-          const percent = Math.round((progress.loaded / progress.total) * 100);
-          setPercentUploaded(percent);
-        },
-      });
-
-      input.photo = {
-        key: uploadedFile.key,
-        bucket: awsAppConfig.aws_user_files_s3_bucket,
-        region: awsAppConfig.aws_project_region,
-      };
+     const uploadPhoto = await uploadFile(imagePreview)
+      input.photo = uploadPhoto
     }
 
     if (values.type === 'Blog') {
@@ -120,35 +126,16 @@ export function ContentEdit({
       };
 
       if (values.blogCoverPhoto) {
-        const visibility = 'provider';
-        const { identityId } = await Auth.currentCredentials();
-        const filename = `${visibility}/${identityId}/${Date.now()}-${
-          values.blogCoverPhoto.name
-        }`;
-        const uploadedFile = await Storage.put(
-          filename,
-          values.blogCoverPhoto,
-          {
-            contentType: values.blogCoverPhoto.type,
-            progressCallback: (progress) => {
-              const percent = Math.round(
-                (progress.loaded / progress.total) * 100
-              );
-              setPercentUploaded(percent);
-            },
-          }
-        );
-        input.blog.blogCoverPhoto = {
-          key: uploadedFile.key,
-          bucket: awsAppConfig.aws_user_files_s3_bucket,
-          region: awsAppConfig.aws_project_region,
-        };
+        const uploadBlogCoverPhoto = await uploadFile(imagePreview)
+        input.blog.blogCoverPhoto = uploadBlogCoverPhoto
       }
     }
 
     if (values.type === 'Video') {
-      input.video = values.video;
+      const uploadVideo = await uploadFile(imagePreview)
+      input.video = uploadVideo;
     }
+
 
     if (!id) {
       dispatch(actions.createContent(input)).then(() => {
@@ -252,6 +239,8 @@ export function ContentEdit({
             btnRef={btnRef}
             saveContent={saveContent}
             percentUploaded={percentUploaded}
+            imagePreview ={imagePreview}
+            setImagePreview ={setImagePreview}
           />
         </div>
       </CardBody>
