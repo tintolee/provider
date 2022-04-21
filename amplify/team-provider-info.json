@@ -124,5 +124,23 @@
         "cm2provider10f62bc4": {}
       }
     }
+  },
+  "tosin": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cm2provider-tosin-154120-authRole",
+      "UnauthRoleArn": "arn:aws:iam::712691200111:role/amplify-cm2provider-tosin-154120-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::712691200111:role/amplify-cm2provider-tosin-154120-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-cm2provider-tosin-154120-deployment",
+      "UnauthRoleName": "amplify-cm2provider-tosin-154120-unauthRole",
+      "StackName": "amplify-cm2provider-tosin-154120",
+      "StackId": "arn:aws:cloudformation:eu-west-1:712691200111:stack/amplify-cm2provider-tosin-154120/1f738890-c181-11ec-81bd-063f8470f7b7",
+      "AmplifyAppId": "d25wjfvzegfqfu"
+    },
+    "categories": {
+      "auth": {
+        "cm2provider10f62bc4": {}
+      }
+    }
   }
 }
