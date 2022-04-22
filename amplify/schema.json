@@ -3308,8 +3308,8 @@
           "description" : null,
           "args" : [ ],
           "type" : {
-            "kind" : "SCALAR",
-            "name" : "String",
+            "kind" : "NON_NULL",
+            "name" : null,
             "ofType" : {
               "kind" : "SCALAR",
               "name" : "String",
@@ -5510,8 +5510,8 @@
           "description" : null,
           "args" : [ ],
           "type" : {
-            "kind" : "OBJECT",
-            "name" : "S3Object",
+            "kind" : "SCALAR",
+            "name" : "String",
             "ofType" : null
           },
           "isDeprecated" : false,
@@ -15891,8 +15891,8 @@
           "name" : "logo",
           "description" : null,
           "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "S3ObjectInput",
+            "kind" : "SCALAR",
+            "name" : "String",
             "ofType" : null
           },
           "defaultValue" : null
@@ -16221,8 +16221,8 @@
           "name" : "logo",
           "description" : null,
           "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "S3ObjectInput",
+            "kind" : "SCALAR",
+            "name" : "Scalar",
             "ofType" : null
           },
           "defaultValue" : null
@@ -18944,7 +18944,7 @@
           "name" : "coverPhoto",
           "description" : null,
           "type" : {
-            "kind" : "SCALAR",
+            "kind" : "NON_NULL",
             "name" : null,
             "ofType" : {
               "kind" : "SCALAR",

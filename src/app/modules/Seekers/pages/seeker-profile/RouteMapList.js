@@ -52,7 +52,7 @@ export default function RouteMapList({ seeker }) {
           </div>
           <div className="card-body flex-column">
             {sortedRouteMaps?.map((post) => {
-              console.log(post)
+  
               return (
                 <div className="d-flex px-1 py-3">
                   <NavLink className="square-post-img-wrapper" to={`steps`}>

@@ -6,6 +6,7 @@ import moment from 'moment';
 import { Link, NavLink } from 'react-router-dom';
 
 const OpportunitiesCard = ({ listLoading, entities }) => {
+
   return (
     <>
       {listLoading ? (

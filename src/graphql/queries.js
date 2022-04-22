@@ -166,11 +166,7 @@ export const listOrderedContentsAndOpportunities = /* GraphQL */ `
           blogTitle
           blogDescription
           blogBody
-          blogCoverPhoto {
-            bucket
-            region
-            key
-          }
+          blogCoverPhoto
           visibility
         }
         photo {
@@ -2475,11 +2471,7 @@ export const getContent = /* GraphQL */ `
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto {
-          bucket
-          region
-          key
-        }
+        blogCoverPhoto
         visibility
       }
       photo {

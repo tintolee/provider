@@ -25,7 +25,6 @@ export const fetchOpportunityProviders = (queryParams, providerId) => (
   return requestFromServer
     .getAllOpportunityProviders(filter)
     .then((response) => {
-      console.log(response);
       const { items } = response.data.listOpportunityProviders;
       var secondarySector = "";
 

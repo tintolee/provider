@@ -1,3 +1,4 @@
+import { connectAdvanced } from 'react-redux';
 import * as requestFromServer from './opportunitiesCrud';
 import { opportunitiesSlice, callTypes } from './opportunitiesSlice';
 
@@ -37,8 +38,6 @@ export const fetchOpportunity = (id) => (dispatch) => {
   return requestFromServer
     .getOpportunityById(id)
     .then((response) => {
-      console.log(response);
-
       const opportunity = response.data.getOpportunity;
       dispatch(actions.opportunityFetched({ opportunityForEdit: opportunity }));
     })
@@ -51,25 +50,18 @@ export const fetchOpportunity = (id) => (dispatch) => {
 };
 
 export const createOpportunity = (opportunityForCreation) => (dispatch) => {
-
   delete opportunityForCreation?.url
-console.log('location data')
-  console.log(opportunityForCreation)
-
   dispatch(actions.startCall({ callType: callTypes.action }));
-  console.log('before sending')
   return requestFromServer
     .createOpportunity(opportunityForCreation)
     .then((response) => {
       const { opportunity } = response.data.createOpportunity;
-      console.log(opportunity)
-
-      // dispatch(actions.opportunityCreated({ opportunity }));
+       dispatch(actions.opportunityCreated({ opportunity }));
     })
     .catch((error) => {
       console.log(error);
       error.clientMessage = "Can't create opportunity";
-      // dispatch(actions.catchError({ error, callType: callTypes.action }));
+       dispatch(actions.catchError({ error, callType: callTypes.action }));
     });
 };
 
@@ -77,12 +69,12 @@ export const updateOpportunity = (opportunity) => (dispatch) => {
   dispatch(actions.startCall({ callType: callTypes.action }));
   return requestFromServer
     .updateOpportunity(opportunity)
-    .then(() => {
-      dispatch(actions.opportunityUpdated({ opportunity }));
+    .then((data) => {
+      dispatch(actions.opportunityUpdated({ data }));
     })
     .catch((error) => {
+      console.log('error from update opportunity')
       console.log(error);
-
       error.clientMessage = "Can't update opportunity";
       dispatch(actions.catchError({ error, callType: callTypes.action }));
     });

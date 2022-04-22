@@ -31,6 +31,21 @@ function EditInformation(props) {
     shallowEqual
   );
 
+  const uploadFile= async (filedata)=>{
+    let formData = new FormData();
+    formData.append("file", filedata);
+    formData.append("upload_preset", "r4v1flgt");
+    const options = {
+      method: "POST",
+      body: formData,
+    };
+   const upload =  await fetch("https://api.Cloudinary.com/v1_1/drt1ulcak/image/upload", options)
+      .then((res) => res.json())
+      .then((res) =>  res.secure_url)
+      .catch((err) => console.log(err));
+      return upload
+  }
+
   useEffect(() => {
     dispatch(providerSectorsActions.fetchOpportunityProviderSectors());
   }, [dispatch]);
@@ -58,20 +73,10 @@ function EditInformation(props) {
       };
 
       if (updatedProvider.logo) {
-        const visibility = 'provider/logo';
-        const { identityId } = await Auth.currentCredentials();
-        const filename = `${visibility}/${identityId}/${Date.now()}-${
-          updatedProvider.logo.name
-        }`;
-        const uploadedFile = await Storage.put(filename, updatedProvider.logo, {
-          contentType: updatedProvider.logo.type,
-        });
-        input.logo = {
-          key: uploadedFile.key,
-          bucket: awsAppConfig.aws_user_files_s3_bucket,
-          region: awsAppConfig.aws_project_region,
-        };
+    const uploadedFile = await uploadFile(imagePreview)
+        input.logo = uploadedFile
       }
+      console.log(input)
 
       dispatch(actions.updateProvider(input))
         .then(() => {

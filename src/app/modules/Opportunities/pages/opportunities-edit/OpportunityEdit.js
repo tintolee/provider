@@ -308,7 +308,6 @@ export function OpportunityEdit({
 
   useEffect(() => {
     if (opportunityValues) {
-      console.log("saving opportunity");
       saveOpportunity(opportunityValues);
     }
   }, [errors]);

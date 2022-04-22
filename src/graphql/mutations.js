@@ -3604,11 +3604,7 @@ export const createPost = /* GraphQL */ `
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto {
-          bucket
-          region
-          key
-        }
+        blogCoverPhoto 
         visibility
       }
       photo {
@@ -3842,11 +3838,7 @@ export const updatePost = /* GraphQL */ `
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto {
-          bucket
-          region
-          key
-        }
+        blogCoverPhoto
         visibility
       }
       photo {
@@ -4080,11 +4072,7 @@ export const deletePost = /* GraphQL */ `
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto {
-          bucket
-          region
-          key
-        }
+        blogCoverPhoto 
         visibility
       }
       photo {
@@ -5289,11 +5277,7 @@ export const updateContent = /* GraphQL */ `
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto {
-          bucket
-          region
-          key
-        }
+        blogCoverPhoto
         visibility
       }
       photo {
@@ -5422,11 +5406,7 @@ export const deleteContent = /* GraphQL */ `
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto {
-          bucket
-          region
-          key
-        }
+        blogCoverPhoto
         visibility
       }
       photo {
