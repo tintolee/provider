@@ -31,18 +31,10 @@ export function getAllContents(queryParams) {
         blog {
           blogTitle
           blogDescription
-          blogCoverPhoto {
-            bucket
-            region
-            key
-          }
+          blogCoverPhoto
           visibility
         }
-        photo {
-          bucket
-          region
-          key
-        }
+        photo
         video
         status
         opportunityProviderId

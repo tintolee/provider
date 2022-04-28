@@ -52,10 +52,10 @@ export const fetchContent = id => dispatch => {
                 positiveFeedbacks: content.positiveFeedbacks,
                 status: content.status,
                 opportunityProvider: {
-                    id: content.opportunityProvider.id
+                    id: "3d3784a2-0184-4825-a793-b67796e00187"
                 },
                 createdBy: {
-                    id: content.createdBy.id
+                    id: "3d3784a2-0184-4825-a793-b67796e00187"
                 },
             }
             if (content.type === "Blog") {
@@ -80,6 +80,7 @@ export const fetchContent = id => dispatch => {
 
 export const createContent = contentForCreation => dispatch => {
     dispatch(actions.startCall({ callType: callTypes.action }));
+    
     return requestFromServer
         .createContent(contentForCreation)
         .then(response => {

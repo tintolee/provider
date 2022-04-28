@@ -16,6 +16,9 @@ export function Dashboard() {
     }),
     shallowEqual
   );
+
+  console.log('user from dashboard')
+  console.log(user)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(actions.fetchDashboard(user.providerId));

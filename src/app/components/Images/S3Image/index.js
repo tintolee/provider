@@ -1,34 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Storage } from 'aws-amplify';
-
-export default function ImageS3({ photo, ...props }) {
-  const [imageSource, setImageSource] = useState(null);
+export default function ImageS3({ photo,...props }) {
+  const [imageSource, setImageSource] = useState(photo);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  const getImage = async ({ key, bucket, region }) => {
-    try {
-      const imageURL = await Storage.get(key, {
-        bucket: bucket,
-        region: region,
-      });
-      setImageSource(imageURL);
-    } catch (e) {
-      console.log(e);
-    }
-  };
+
 
   useEffect(() => {
-    if (photo) {
-      getImage(photo);
-    }
+  
   }, []);
   return (
     <>
       {imageSource && !imageLoaded && (
         <img
           alt=''
-          src={imageSource}
-          {...props}  
+          src={photo}
+          {...props}
           onError={() => setImageLoaded(true)}
         />
       )}

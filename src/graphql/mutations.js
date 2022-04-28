@@ -28,11 +28,7 @@ export const createOpportunityProvider = /* GraphQL */ `
       email
       educationalInstitution
       status
-      logo {
-        bucket
-        region
-        key
-      }
+      logo
       tagline
       address
       phone
@@ -41,92 +37,25 @@ export const createOpportunityProvider = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       otherSectors {
-        items {
-          id
-          opportunityProviderId
-          sectorId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       followers {
-        items {
-          id
-          status
-          startedAt
-          opportunityProviderId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       contents {
-        items {
-          id
-          title
-          sortable
-          caption
-          description
-          createdAt
-          type
-          video
-          status
-          opportunityProviderId
-          opportunityProviderUserId
-          updatedAt
-        }
         nextToken
       }
       opportunities {
-        items {
-          id
-          title
-          location
-          sortable
-          createdAt
-          date
-          description
-          caption
-          capacity
-          status
-          applicationRequired
-          applicationDeadline
-          isLimitedCapacity
-          opportunityOpportunityProviderId
-          updatedAt
-        }
         nextToken
       }
       opportunityTypes {
-        items {
-          id
-          opportunityProviderId
-          opportunityTypeId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       users {
-        items {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -148,11 +77,7 @@ export const updateOpportunityProvider = /* GraphQL */ `
       email
       educationalInstitution
       status
-      logo {
-        bucket
-        region
-        key
-      }
+      logo
       tagline
       address
       phone
@@ -161,92 +86,25 @@ export const updateOpportunityProvider = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       otherSectors {
-        items {
-          id
-          opportunityProviderId
-          sectorId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       followers {
-        items {
-          id
-          status
-          startedAt
-          opportunityProviderId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       contents {
-        items {
-          id
-          title
-          sortable
-          caption
-          description
-          createdAt
-          type
-          video
-          status
-          opportunityProviderId
-          opportunityProviderUserId
-          updatedAt
-        }
         nextToken
       }
       opportunities {
-        items {
-          id
-          title
-          location
-          sortable
-          createdAt
-          date
-          description
-          caption
-          capacity
-          status
-          applicationRequired
-          applicationDeadline
-          isLimitedCapacity
-          opportunityOpportunityProviderId
-          updatedAt
-        }
         nextToken
       }
       opportunityTypes {
-        items {
-          id
-          opportunityProviderId
-          opportunityTypeId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       users {
-        items {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -268,11 +126,7 @@ export const deleteOpportunityProvider = /* GraphQL */ `
       email
       educationalInstitution
       status
-      logo {
-        bucket
-        region
-        key
-      }
+      logo
       tagline
       address
       phone
@@ -281,92 +135,25 @@ export const deleteOpportunityProvider = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       otherSectors {
-        items {
-          id
-          opportunityProviderId
-          sectorId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       followers {
-        items {
-          id
-          status
-          startedAt
-          opportunityProviderId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       contents {
-        items {
-          id
-          title
-          sortable
-          caption
-          description
-          createdAt
-          type
-          video
-          status
-          opportunityProviderId
-          opportunityProviderUserId
-          updatedAt
-        }
         nextToken
       }
       opportunities {
-        items {
-          id
-          title
-          location
-          sortable
-          createdAt
-          date
-          description
-          caption
-          capacity
-          status
-          applicationRequired
-          applicationDeadline
-          isLimitedCapacity
-          opportunityOpportunityProviderId
-          updatedAt
-        }
         nextToken
       }
       opportunityTypes {
-        items {
-          id
-          opportunityProviderId
-          opportunityTypeId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       users {
-        items {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -394,40 +181,11 @@ export const createOpportunityProviderFollower = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -442,43 +200,12 @@ export const createOpportunityProviderFollower = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -507,40 +234,11 @@ export const updateOpportunityProviderFollower = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -555,43 +253,12 @@ export const updateOpportunityProviderFollower = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -620,40 +287,11 @@ export const deleteOpportunityProviderFollower = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -668,43 +306,12 @@ export const deleteOpportunityProviderFollower = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -723,13 +330,6 @@ export const createOpportunityProviderSector = /* GraphQL */ `
       name
       status
       opportunityProviders {
-        items {
-          id
-          opportunityProviderId
-          sectorId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -747,13 +347,6 @@ export const updateOpportunityProviderSector = /* GraphQL */ `
       name
       status
       opportunityProviders {
-        items {
-          id
-          opportunityProviderId
-          sectorId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -771,13 +364,6 @@ export const deleteOpportunityProviderSector = /* GraphQL */ `
       name
       status
       opportunityProviders {
-        items {
-          id
-          opportunityProviderId
-          sectorId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -803,40 +389,11 @@ export const createOpportunityProviderOtherSector = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -844,9 +401,6 @@ export const createOpportunityProviderOtherSector = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -873,40 +427,11 @@ export const updateOpportunityProviderOtherSector = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -914,9 +439,6 @@ export const updateOpportunityProviderOtherSector = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -943,40 +465,11 @@ export const deleteOpportunityProviderOtherSector = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -984,9 +477,6 @@ export const deleteOpportunityProviderOtherSector = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -1016,40 +506,11 @@ export const createOpportunityProviderOpportunityType = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -1086,40 +547,11 @@ export const updateOpportunityProviderOpportunityType = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -1156,40 +588,11 @@ export const deleteOpportunityProviderOpportunityType = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -1225,40 +628,11 @@ export const createOpportunityProviderUser = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -1288,40 +662,11 @@ export const updateOpportunityProviderUser = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -1351,40 +696,11 @@ export const deleteOpportunityProviderUser = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -1403,21 +719,14 @@ export const createOpportunity = /* GraphQL */ `
       id
       title
       location
-      sortable
-      createdAt
       date
       description
       caption
       capacity
       status
-      cover {
-        bucket
-        region
-        key
-      }
+      cover
       applicationRequired
       applicationDeadline
-      isLimitedCapacity
       opportunityType {
         id
         name
@@ -1426,12 +735,6 @@ export const createOpportunity = /* GraphQL */ `
         updatedAt
       }
       opportunityCreatedSteps {
-        items {
-          id
-          opportunityStepOpportunityId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       organiser {
@@ -1440,22 +743,6 @@ export const createOpportunity = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -1469,69 +756,22 @@ export const createOpportunity = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       opportunityOpportunityProviderId
       attendees {
-        items {
-          id
-          status
-          seekerComment
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -1545,21 +785,14 @@ export const updateOpportunity = /* GraphQL */ `
       id
       title
       location
-      sortable
-      createdAt
       date
       description
       caption
       capacity
       status
-      cover {
-        bucket
-        region
-        key
-      }
+      cover
       applicationRequired
       applicationDeadline
-      isLimitedCapacity
       opportunityType {
         id
         name
@@ -1568,12 +801,6 @@ export const updateOpportunity = /* GraphQL */ `
         updatedAt
       }
       opportunityCreatedSteps {
-        items {
-          id
-          opportunityStepOpportunityId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       organiser {
@@ -1582,22 +809,6 @@ export const updateOpportunity = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -1611,69 +822,22 @@ export const updateOpportunity = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       opportunityOpportunityProviderId
       attendees {
-        items {
-          id
-          status
-          seekerComment
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -1687,21 +851,14 @@ export const deleteOpportunity = /* GraphQL */ `
       id
       title
       location
-      sortable
-      createdAt
       date
       description
       caption
       capacity
       status
-      cover {
-        bucket
-        region
-        key
-      }
+      cover
       applicationRequired
       applicationDeadline
-      isLimitedCapacity
       opportunityType {
         id
         name
@@ -1710,12 +867,6 @@ export const deleteOpportunity = /* GraphQL */ `
         updatedAt
       }
       opportunityCreatedSteps {
-        items {
-          id
-          opportunityStepOpportunityId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       organiser {
@@ -1724,22 +875,6 @@ export const deleteOpportunity = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -1753,69 +888,22 @@ export const deleteOpportunity = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       opportunityOpportunityProviderId
       attendees {
-        items {
-          id
-          status
-          seekerComment
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -1877,64 +965,16 @@ export const createOpportunityAttendee = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -1948,43 +988,12 @@ export const createOpportunityAttendee = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -1997,40 +1006,11 @@ export const createOpportunityAttendee = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -2054,64 +1034,16 @@ export const updateOpportunityAttendee = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -2125,43 +1057,12 @@ export const updateOpportunityAttendee = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -2174,40 +1075,11 @@ export const updateOpportunityAttendee = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -2231,64 +1103,16 @@ export const deleteOpportunityAttendee = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -2302,43 +1126,12 @@ export const deleteOpportunityAttendee = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -2351,40 +1144,11 @@ export const deleteOpportunityAttendee = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -2404,64 +1168,16 @@ export const createOpportunityStep = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       opportunityStepOpportunityId
@@ -2476,43 +1192,12 @@ export const createOpportunityStep = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -2532,64 +1217,16 @@ export const updateOpportunityStep = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       opportunityStepOpportunityId
@@ -2604,43 +1241,12 @@ export const updateOpportunityStep = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -2660,64 +1266,16 @@ export const deleteOpportunityStep = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       opportunityStepOpportunityId
@@ -2732,43 +1290,12 @@ export const deleteOpportunityStep = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -2793,59 +1320,17 @@ export const createSeeker = /* GraphQL */ `
       postcodeArea
       dateOfBirth
       biography
-      profilePic {
-        bucket
-        region
-        key
-      }
+      profilePic
       routeMaps {
-        items {
-          id
-          visibility
-          status
-          destination
-          isCompleted
-          focusAreas
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       opportunityProviders {
-        items {
-          id
-          status
-          startedAt
-          opportunityProviderId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       opportunities {
-        items {
-          id
-          status
-          seekerComment
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       posts {
-        items {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         nextToken
       }
       interests
@@ -2854,67 +1339,18 @@ export const createSeeker = /* GraphQL */ `
       visibleToProviders
       visibleToSeekers
       friends {
-        items {
-          id
-          status
-          friendId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       friendRequests {
-        items {
-          id
-          status
-          recipientId
-          requesterId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       collaborations {
-        items {
-          id
-          title
-          sortable
-          createdAt
-          location
-          startDate
-          endDate
-          description
-          caption
-          capacity
-          status
-          inviteOnly
-          updatedAt
-        }
         nextToken
       }
       collaborationMembers {
-        items {
-          id
-          status
-          comment
-          collaborationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       conversationMembers {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -2938,59 +1374,17 @@ export const updateSeeker = /* GraphQL */ `
       postcodeArea
       dateOfBirth
       biography
-      profilePic {
-        bucket
-        region
-        key
-      }
+      profilePic
       routeMaps {
-        items {
-          id
-          visibility
-          status
-          destination
-          isCompleted
-          focusAreas
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       opportunityProviders {
-        items {
-          id
-          status
-          startedAt
-          opportunityProviderId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       opportunities {
-        items {
-          id
-          status
-          seekerComment
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       posts {
-        items {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         nextToken
       }
       interests
@@ -2999,67 +1393,18 @@ export const updateSeeker = /* GraphQL */ `
       visibleToProviders
       visibleToSeekers
       friends {
-        items {
-          id
-          status
-          friendId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       friendRequests {
-        items {
-          id
-          status
-          recipientId
-          requesterId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       collaborations {
-        items {
-          id
-          title
-          sortable
-          createdAt
-          location
-          startDate
-          endDate
-          description
-          caption
-          capacity
-          status
-          inviteOnly
-          updatedAt
-        }
         nextToken
       }
       collaborationMembers {
-        items {
-          id
-          status
-          comment
-          collaborationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       conversationMembers {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -3083,59 +1428,17 @@ export const deleteSeeker = /* GraphQL */ `
       postcodeArea
       dateOfBirth
       biography
-      profilePic {
-        bucket
-        region
-        key
-      }
+      profilePic
       routeMaps {
-        items {
-          id
-          visibility
-          status
-          destination
-          isCompleted
-          focusAreas
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       opportunityProviders {
-        items {
-          id
-          status
-          startedAt
-          opportunityProviderId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       opportunities {
-        items {
-          id
-          status
-          seekerComment
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       posts {
-        items {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         nextToken
       }
       interests
@@ -3144,67 +1447,18 @@ export const deleteSeeker = /* GraphQL */ `
       visibleToProviders
       visibleToSeekers
       friends {
-        items {
-          id
-          status
-          friendId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       friendRequests {
-        items {
-          id
-          status
-          recipientId
-          requesterId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       collaborations {
-        items {
-          id
-          title
-          sortable
-          createdAt
-          location
-          startDate
-          endDate
-          description
-          caption
-          capacity
-          status
-          inviteOnly
-          updatedAt
-        }
         nextToken
       }
       collaborationMembers {
-        items {
-          id
-          status
-          comment
-          collaborationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       conversationMembers {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -3221,13 +1475,8 @@ export const createRouteMap = /* GraphQL */ `
       id
       visibility
       status
-      coverPhoto {
-        bucket
-        region
-        key
-      }
+      coverPhoto
       destination
-      isCompleted
       category {
         id
         name
@@ -3248,58 +1497,17 @@ export const createRouteMap = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       focusAreas
       posts {
-        items {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -3316,13 +1524,8 @@ export const updateRouteMap = /* GraphQL */ `
       id
       visibility
       status
-      coverPhoto {
-        bucket
-        region
-        key
-      }
+      coverPhoto
       destination
-      isCompleted
       category {
         id
         name
@@ -3343,58 +1546,17 @@ export const updateRouteMap = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       focusAreas
       posts {
-        items {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -3411,13 +1573,8 @@ export const deleteRouteMap = /* GraphQL */ `
       id
       visibility
       status
-      coverPhoto {
-        bucket
-        region
-        key
-      }
+      coverPhoto
       destination
-      isCompleted
       category {
         id
         name
@@ -3438,58 +1595,17 @@ export const deleteRouteMap = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       focusAreas
       posts {
-        items {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         nextToken
       }
       createdAt
@@ -3597,78 +1713,29 @@ export const createPost = /* GraphQL */ `
       type
       caption
       status
-      sortable
-      createdAt
       visibility
       blog {
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto 
+        blogCoverPhoto
         visibility
       }
-      photo {
-        bucket
-        region
-        key
-      }
-      video {
-        bucket
-        region
-        key
-      }
-      videoThumbnail {
-        bucket
-        region
-        key
-      }
+      photo
+      video
+      videoThumbnail
       milestone {
         title
         date
       }
+      createdAt
       routeMap {
         id
         visibility
         status
-        coverPhoto {
-          bucket
-          region
-          key
-        }
+        coverPhoto
         destination
-        isCompleted
-        category {
-          id
-          name
-          iconName
-          bgColor
-          status
-          createdAt
-          updatedAt
-        }
-        owner {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
         focusAreas
-        posts {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -3676,80 +1743,22 @@ export const createPost = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       tags {
         id
         tag
         link
-        posts {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         createdAt
         updatedAt
       }
@@ -3764,57 +1773,16 @@ export const createPost = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       updatedAt
@@ -3831,8 +1799,6 @@ export const updatePost = /* GraphQL */ `
       type
       caption
       status
-      sortable
-      createdAt
       visibility
       blog {
         blogTitle
@@ -3841,68 +1807,21 @@ export const updatePost = /* GraphQL */ `
         blogCoverPhoto
         visibility
       }
-      photo {
-        bucket
-        region
-        key
-      }
-      video {
-        bucket
-        region
-        key
-      }
-      videoThumbnail {
-        bucket
-        region
-        key
-      }
+      photo
+      video
+      videoThumbnail
       milestone {
         title
         date
       }
+      createdAt
       routeMap {
         id
         visibility
         status
-        coverPhoto {
-          bucket
-          region
-          key
-        }
+        coverPhoto
         destination
-        isCompleted
-        category {
-          id
-          name
-          iconName
-          bgColor
-          status
-          createdAt
-          updatedAt
-        }
-        owner {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
         focusAreas
-        posts {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -3910,80 +1829,22 @@ export const updatePost = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       tags {
         id
         tag
         link
-        posts {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         createdAt
         updatedAt
       }
@@ -3998,57 +1859,16 @@ export const updatePost = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       updatedAt
@@ -4065,78 +1885,29 @@ export const deletePost = /* GraphQL */ `
       type
       caption
       status
-      sortable
-      createdAt
       visibility
       blog {
         blogTitle
         blogDescription
         blogBody
-        blogCoverPhoto 
+        blogCoverPhoto
         visibility
       }
-      photo {
-        bucket
-        region
-        key
-      }
-      video {
-        bucket
-        region
-        key
-      }
-      videoThumbnail {
-        bucket
-        region
-        key
-      }
+      photo
+      video
+      videoThumbnail
       milestone {
         title
         date
       }
+      createdAt
       routeMap {
         id
         visibility
         status
-        coverPhoto {
-          bucket
-          region
-          key
-        }
+        coverPhoto
         destination
-        isCompleted
-        category {
-          id
-          name
-          iconName
-          bgColor
-          status
-          createdAt
-          updatedAt
-        }
-        owner {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
         focusAreas
-        posts {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -4144,80 +1915,22 @@ export const deletePost = /* GraphQL */ `
         id
         title
         location
-        sortable
-        createdAt
         date
         description
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
+        cover
         applicationRequired
         applicationDeadline
-        isLimitedCapacity
-        opportunityType {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        opportunityCreatedSteps {
-          nextToken
-        }
-        organiser {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityOpportunityProviderId
-        attendees {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       tags {
         id
         tag
         link
-        posts {
-          id
-          type
-          caption
-          status
-          sortable
-          createdAt
-          visibility
-          updatedAt
-        }
         createdAt
         updatedAt
       }
@@ -4232,57 +1945,16 @@ export const deletePost = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       updatedAt
@@ -4303,90 +1975,11 @@ export const createPostTag = /* GraphQL */ `
         type
         caption
         status
-        sortable
-        createdAt
         visibility
-        blog {
-          blogTitle
-          blogDescription
-          blogBody
-          visibility
-        }
-        photo {
-          bucket
-          region
-          key
-        }
-        video {
-          bucket
-          region
-          key
-        }
-        videoThumbnail {
-          bucket
-          region
-          key
-        }
-        milestone {
-          title
-          date
-        }
-        routeMap {
-          id
-          visibility
-          status
-          destination
-          isCompleted
-          focusAreas
-          createdAt
-          updatedAt
-        }
-        opportunity {
-          id
-          title
-          location
-          sortable
-          createdAt
-          date
-          description
-          caption
-          capacity
-          status
-          applicationRequired
-          applicationDeadline
-          isLimitedCapacity
-          opportunityOpportunityProviderId
-          updatedAt
-        }
-        tags {
-          id
-          tag
-          link
-          createdAt
-          updatedAt
-        }
-        seeker {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
-        likes {
-          nextToken
-        }
+        photo
+        video
+        videoThumbnail
+        createdAt
         updatedAt
       }
       createdAt
@@ -4408,90 +2001,11 @@ export const updatePostTag = /* GraphQL */ `
         type
         caption
         status
-        sortable
-        createdAt
         visibility
-        blog {
-          blogTitle
-          blogDescription
-          blogBody
-          visibility
-        }
-        photo {
-          bucket
-          region
-          key
-        }
-        video {
-          bucket
-          region
-          key
-        }
-        videoThumbnail {
-          bucket
-          region
-          key
-        }
-        milestone {
-          title
-          date
-        }
-        routeMap {
-          id
-          visibility
-          status
-          destination
-          isCompleted
-          focusAreas
-          createdAt
-          updatedAt
-        }
-        opportunity {
-          id
-          title
-          location
-          sortable
-          createdAt
-          date
-          description
-          caption
-          capacity
-          status
-          applicationRequired
-          applicationDeadline
-          isLimitedCapacity
-          opportunityOpportunityProviderId
-          updatedAt
-        }
-        tags {
-          id
-          tag
-          link
-          createdAt
-          updatedAt
-        }
-        seeker {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
-        likes {
-          nextToken
-        }
+        photo
+        video
+        videoThumbnail
+        createdAt
         updatedAt
       }
       createdAt
@@ -4513,90 +2027,11 @@ export const deletePostTag = /* GraphQL */ `
         type
         caption
         status
-        sortable
-        createdAt
         visibility
-        blog {
-          blogTitle
-          blogDescription
-          blogBody
-          visibility
-        }
-        photo {
-          bucket
-          region
-          key
-        }
-        video {
-          bucket
-          region
-          key
-        }
-        videoThumbnail {
-          bucket
-          region
-          key
-        }
-        milestone {
-          title
-          date
-        }
-        routeMap {
-          id
-          visibility
-          status
-          destination
-          isCompleted
-          focusAreas
-          createdAt
-          updatedAt
-        }
-        opportunity {
-          id
-          title
-          location
-          sortable
-          createdAt
-          date
-          description
-          caption
-          capacity
-          status
-          applicationRequired
-          applicationDeadline
-          isLimitedCapacity
-          opportunityOpportunityProviderId
-          updatedAt
-        }
-        tags {
-          id
-          tag
-          link
-          createdAt
-          updatedAt
-        }
-        seeker {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
-        likes {
-          nextToken
-        }
+        photo
+        video
+        videoThumbnail
+        createdAt
         updatedAt
       }
       createdAt
@@ -4627,43 +2062,12 @@ export const likeResource = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -4695,43 +2099,12 @@ export const unlikeResource = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -4829,9 +2202,6 @@ export const createSpecialProject = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -4841,22 +2211,6 @@ export const createSpecialProject = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -4870,40 +2224,11 @@ export const createSpecialProject = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -4933,9 +2258,6 @@ export const updateSpecialProject = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -4945,22 +2267,6 @@ export const updateSpecialProject = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -4974,40 +2280,11 @@ export const updateSpecialProject = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -5037,9 +2314,6 @@ export const deleteSpecialProject = /* GraphQL */ `
         id
         name
         status
-        opportunityProviders {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -5049,22 +2323,6 @@ export const deleteSpecialProject = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -5078,40 +2336,11 @@ export const deleteSpecialProject = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -5128,20 +2357,10 @@ export const createContent = /* GraphQL */ `
     createContent(input: $input, condition: $condition) {
       id
       title
-      sortable
       caption
       description
-      createdAt
       type
       positiveFeedbacks {
-        items {
-          id
-          addedAt
-          contentId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       blog {
@@ -5151,11 +2370,7 @@ export const createContent = /* GraphQL */ `
         blogCoverPhoto
         visibility
       }
-      photo {
-        bucket
-        region
-        key
-      }
+      photo
       video
       status
       opportunityProviderId
@@ -5166,22 +2381,6 @@ export const createContent = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -5195,56 +2394,18 @@ export const createContent = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -5257,20 +2418,10 @@ export const updateContent = /* GraphQL */ `
     updateContent(input: $input, condition: $condition) {
       id
       title
-      sortable
       caption
       description
-      createdAt
       type
       positiveFeedbacks {
-        items {
-          id
-          addedAt
-          contentId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       blog {
@@ -5280,11 +2431,7 @@ export const updateContent = /* GraphQL */ `
         blogCoverPhoto
         visibility
       }
-      photo {
-        bucket
-        region
-        key
-      }
+      photo
       video
       status
       opportunityProviderId
@@ -5295,22 +2442,6 @@ export const updateContent = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -5324,56 +2455,18 @@ export const updateContent = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -5386,20 +2479,10 @@ export const deleteContent = /* GraphQL */ `
     deleteContent(input: $input, condition: $condition) {
       id
       title
-      sortable
       caption
       description
-      createdAt
       type
       positiveFeedbacks {
-        items {
-          id
-          addedAt
-          contentId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       blog {
@@ -5409,11 +2492,7 @@ export const deleteContent = /* GraphQL */ `
         blogCoverPhoto
         visibility
       }
-      photo {
-        bucket
-        region
-        key
-      }
+      photo
       video
       status
       opportunityProviderId
@@ -5424,22 +2503,6 @@ export const deleteContent = /* GraphQL */ `
         lastName
         email
         status
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
         opportunityProviderUserOpportunityProviderId
         createdAt
         updatedAt
@@ -5453,56 +2516,18 @@ export const deleteContent = /* GraphQL */ `
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone
         website
-        primarySector {
-          id
-          name
-          status
-          createdAt
-          updatedAt
-        }
-        otherSectors {
-          nextToken
-        }
-        followers {
-          nextToken
-        }
-        contents {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        opportunityTypes {
-          nextToken
-        }
-        users {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -5520,58 +2545,15 @@ export const createContentPositiveFeedback = /* GraphQL */ `
       content {
         id
         title
-        sortable
         caption
         description
-        createdAt
         type
-        positiveFeedbacks {
-          nextToken
-        }
-        blog {
-          blogTitle
-          blogDescription
-          blogBody
-          visibility
-        }
-        photo {
-          bucket
-          region
-          key
-        }
+        photo
         video
         status
         opportunityProviderId
         opportunityProviderUserId
-        createdBy {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -5585,43 +2567,12 @@ export const createContentPositiveFeedback = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -5643,58 +2594,15 @@ export const updateContentPositiveFeedback = /* GraphQL */ `
       content {
         id
         title
-        sortable
         caption
         description
-        createdAt
         type
-        positiveFeedbacks {
-          nextToken
-        }
-        blog {
-          blogTitle
-          blogDescription
-          blogBody
-          visibility
-        }
-        photo {
-          bucket
-          region
-          key
-        }
+        photo
         video
         status
         opportunityProviderId
         opportunityProviderUserId
-        createdBy {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -5708,43 +2616,12 @@ export const updateContentPositiveFeedback = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -5766,58 +2643,15 @@ export const deleteContentPositiveFeedback = /* GraphQL */ `
       content {
         id
         title
-        sortable
         caption
         description
-        createdAt
         type
-        positiveFeedbacks {
-          nextToken
-        }
-        blog {
-          blogTitle
-          blogDescription
-          blogBody
-          visibility
-        }
-        photo {
-          bucket
-          region
-          key
-        }
+        photo
         video
         status
         opportunityProviderId
         opportunityProviderUserId
-        createdBy {
-          id
-          firstName
-          lastName
-          email
-          status
-          opportunityProviderUserOpportunityProviderId
-          createdAt
-          updatedAt
-        }
-        opportunityProvider {
-          id
-          name
-          displayName
-          companyNo
-          parent
-          email
-          educationalInstitution
-          status
-          tagline
-          address
-          phone
-          website
-          createdAt
-          updatedAt
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -5831,43 +2665,12 @@ export const deleteContentPositiveFeedback = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -5897,43 +2700,12 @@ export const createFriendship = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -5948,43 +2720,12 @@ export const createFriendship = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6014,43 +2755,12 @@ export const updateFriendship = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6065,43 +2775,12 @@ export const updateFriendship = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6131,43 +2810,12 @@ export const deleteFriendship = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6182,43 +2830,12 @@ export const deleteFriendship = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6248,43 +2865,12 @@ export const createFriendshipRequest = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6299,43 +2885,12 @@ export const createFriendshipRequest = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6365,43 +2920,12 @@ export const updateFriendshipRequest = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6416,43 +2940,12 @@ export const updateFriendshipRequest = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6482,43 +2975,12 @@ export const deleteFriendshipRequest = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6533,43 +2995,12 @@ export const deleteFriendshipRequest = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -6631,8 +3062,6 @@ export const createCollaboration = /* GraphQL */ `
     createCollaboration(input: $input, condition: $condition) {
       id
       title
-      sortable
-      createdAt
       location
       startDate
       endDate
@@ -6640,16 +3069,8 @@ export const createCollaboration = /* GraphQL */ `
       caption
       capacity
       status
-      cover {
-        bucket
-        region
-        key
-      }
-      coverThumb {
-        bucket
-        region
-        key
-      }
+      cover
+      coverThumb
       inviteOnly
       owner {
         id
@@ -6662,71 +3083,22 @@ export const createCollaboration = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       members {
-        items {
-          id
-          status
-          comment
-          collaborationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -6739,8 +3111,6 @@ export const updateCollaboration = /* GraphQL */ `
     updateCollaboration(input: $input, condition: $condition) {
       id
       title
-      sortable
-      createdAt
       location
       startDate
       endDate
@@ -6748,16 +3118,8 @@ export const updateCollaboration = /* GraphQL */ `
       caption
       capacity
       status
-      cover {
-        bucket
-        region
-        key
-      }
-      coverThumb {
-        bucket
-        region
-        key
-      }
+      cover
+      coverThumb
       inviteOnly
       owner {
         id
@@ -6770,71 +3132,22 @@ export const updateCollaboration = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       members {
-        items {
-          id
-          status
-          comment
-          collaborationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -6847,8 +3160,6 @@ export const deleteCollaboration = /* GraphQL */ `
     deleteCollaboration(input: $input, condition: $condition) {
       id
       title
-      sortable
-      createdAt
       location
       startDate
       endDate
@@ -6856,16 +3167,8 @@ export const deleteCollaboration = /* GraphQL */ `
       caption
       capacity
       status
-      cover {
-        bucket
-        region
-        key
-      }
-      coverThumb {
-        bucket
-        region
-        key
-      }
+      cover
+      coverThumb
       inviteOnly
       owner {
         id
@@ -6878,71 +3181,22 @@ export const deleteCollaboration = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
       members {
-        items {
-          id
-          status
-          comment
-          collaborationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       likes {
-        items {
-          id
-          postId
-          contentId
-          collaborationId
-          opportunityId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
+      createdAt
       updatedAt
     }
   }
@@ -6961,8 +3215,6 @@ export const createCollaborationMember = /* GraphQL */ `
       collaboration {
         id
         title
-        sortable
-        createdAt
         location
         startDate
         endDate
@@ -6970,42 +3222,10 @@ export const createCollaborationMember = /* GraphQL */ `
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
-        coverThumb {
-          bucket
-          region
-          key
-        }
+        cover
+        coverThumb
         inviteOnly
-        owner {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
-        members {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -7019,43 +3239,12 @@ export const createCollaborationMember = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -7078,8 +3267,6 @@ export const updateCollaborationMember = /* GraphQL */ `
       collaboration {
         id
         title
-        sortable
-        createdAt
         location
         startDate
         endDate
@@ -7087,42 +3274,10 @@ export const updateCollaborationMember = /* GraphQL */ `
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
-        coverThumb {
-          bucket
-          region
-          key
-        }
+        cover
+        coverThumb
         inviteOnly
-        owner {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
-        members {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -7136,43 +3291,12 @@ export const updateCollaborationMember = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -7195,8 +3319,6 @@ export const deleteCollaborationMember = /* GraphQL */ `
       collaboration {
         id
         title
-        sortable
-        createdAt
         location
         startDate
         endDate
@@ -7204,42 +3326,10 @@ export const deleteCollaborationMember = /* GraphQL */ `
         caption
         capacity
         status
-        cover {
-          bucket
-          region
-          key
-        }
-        coverThumb {
-          bucket
-          region
-          key
-        }
+        cover
+        coverThumb
         inviteOnly
-        owner {
-          id
-          username
-          firstName
-          lastName
-          email
-          status
-          mobileNumber
-          postcodeArea
-          dateOfBirth
-          biography
-          interests
-          admireBrands
-          profileCompleted
-          visibleToProviders
-          visibleToSeekers
-          createdAt
-          updatedAt
-        }
-        members {
-          nextToken
-        }
-        likes {
-          nextToken
-        }
+        createdAt
         updatedAt
       }
       seeker {
@@ -7253,43 +3343,12 @@ export const deleteCollaborationMember = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -7322,43 +3381,12 @@ export const createMessage = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -7368,14 +3396,6 @@ export const createMessage = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       createdAt
       updatedAt
@@ -7406,43 +3426,12 @@ export const updateMessage = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -7452,14 +3441,6 @@ export const updateMessage = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       createdAt
       updatedAt
@@ -7490,43 +3471,12 @@ export const deleteMessage = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -7536,14 +3486,6 @@ export const deleteMessage = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       createdAt
       updatedAt
@@ -7561,32 +3503,10 @@ export const createConversation = /* GraphQL */ `
       title
       createdAt
       updatedAt
-      groupId
-      avatar
       members {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       messages {
-        items {
-          id
-          conversationId
-          author
-          body
-          content
-          seekerId
-          type
-          createdAt
-          updatedAt
-        }
         nextToken
       }
     }
@@ -7603,32 +3523,10 @@ export const updateConversation = /* GraphQL */ `
       title
       createdAt
       updatedAt
-      groupId
-      avatar
       members {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       messages {
-        items {
-          id
-          conversationId
-          author
-          body
-          content
-          seekerId
-          type
-          createdAt
-          updatedAt
-        }
         nextToken
       }
     }
@@ -7645,32 +3543,10 @@ export const deleteConversation = /* GraphQL */ `
       title
       createdAt
       updatedAt
-      groupId
-      avatar
       members {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       messages {
-        items {
-          id
-          conversationId
-          author
-          body
-          content
-          seekerId
-          type
-          createdAt
-          updatedAt
-        }
         nextToken
       }
     }
@@ -7693,14 +3569,6 @@ export const createConversationMember = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       seeker {
         id
@@ -7713,43 +3581,12 @@ export const createConversationMember = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -7775,14 +3612,6 @@ export const updateConversationMember = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       seeker {
         id
@@ -7795,43 +3624,12 @@ export const updateConversationMember = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -7857,14 +3655,6 @@ export const deleteConversationMember = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       seeker {
         id
@@ -7877,43 +3667,12 @@ export const deleteConversationMember = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }

@@ -13,11 +13,7 @@ export function getOpportunityProviderById(providerId) {
         email
         educationalInstitution
         status
-        logo {
-          bucket
-          region
-          key
-        }
+        logo
         tagline
         address
         phone

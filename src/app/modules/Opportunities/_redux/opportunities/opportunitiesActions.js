@@ -50,8 +50,10 @@ export const fetchOpportunity = (id) => (dispatch) => {
 };
 
 export const createOpportunity = (opportunityForCreation) => (dispatch) => {
-  delete opportunityForCreation?.url
-  dispatch(actions.startCall({ callType: callTypes.action }));
+  console.log(opportunityForCreation.cover)
+  opportunityForCreation.cover ="http://res.cloudinary.com/drt1ulcak/image/upload/v1651150434/g7eb9gbefcjsza3qduyw.png"
+
+  dispatch(actions.startCall({ callType: callTypes.action })  );
   return requestFromServer
     .createOpportunity(opportunityForCreation)
     .then((response) => {
@@ -70,11 +72,11 @@ export const updateOpportunity = (opportunity) => (dispatch) => {
   return requestFromServer
     .updateOpportunity(opportunity)
     .then((data) => {
+
       dispatch(actions.opportunityUpdated({ data }));
     })
     .catch((error) => {
       console.log('error from update opportunity')
-      console.log(error);
       error.clientMessage = "Can't update opportunity";
       dispatch(actions.catchError({ error, callType: callTypes.action }));
     });

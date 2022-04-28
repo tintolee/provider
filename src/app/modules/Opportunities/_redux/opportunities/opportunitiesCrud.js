@@ -23,11 +23,7 @@ export function getAllOpportunities(queryParams, providerId) {
             description
             capacity
             status
-            cover {
-              bucket
-              region
-              key
-            }
+            cover
             applicationRequired
             applicationDeadline
             opportunityType {

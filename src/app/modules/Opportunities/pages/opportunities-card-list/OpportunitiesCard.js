@@ -13,7 +13,7 @@ const OpportunitiesCard = ({ listLoading, entities }) => {
         <div className='d-flex align-items-center justify-content-center w-100'>
           <div className='spinner spinner-primary mr-10'></div>
         </div>
-      ) : (
+      ) : ( 
         entities && (
           <>
             {entities.map((entity, index) => (

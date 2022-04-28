@@ -67,7 +67,7 @@ export function ContentEdit({
       method: "POST",
       body: formData,
     };
-   const upload =  await fetch("https://api.Cloudinary.com/v1_1/drt1ulcak/image/upload", options)
+   const upload =  await fetch("https://api.Cloudinary.com/v1_1/dw2c6c2hi/image/upload", options)
       .then((res) => res.json())
       .then((res) =>  res.secure_url)
       .catch((err) => console.log(err));

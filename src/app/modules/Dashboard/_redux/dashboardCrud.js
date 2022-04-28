@@ -27,11 +27,7 @@ export function getDashboardById(providerId, queryParams) {
             }
             title
             id
-            cover {
-              bucket
-              region
-              key
-            }
+            cover
           }
         }
       }

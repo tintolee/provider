@@ -16,11 +16,7 @@ export function getAllOpportunityAttendees(opportunityId, queryParams) {
               firstName
               lastName
               biography
-              profilePic {
-                bucket
-                key
-                region
-              }
+              profilePic
               routeMaps {
                 items {
                   id

@@ -22,43 +22,12 @@ export const onCreateMessageByConversationId = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -68,14 +37,6 @@ export const onCreateMessageByConversationId = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       createdAt
       updatedAt
@@ -96,14 +57,6 @@ export const onCreateConversationMemberBySeekerId = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       seeker {
         id
@@ -116,43 +69,12 @@ export const onCreateConversationMemberBySeekerId = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -182,43 +104,12 @@ export const onCreateMessage = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -228,14 +119,6 @@ export const onCreateMessage = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       createdAt
       updatedAt
@@ -263,43 +146,12 @@ export const onUpdateMessage = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -309,14 +161,6 @@ export const onUpdateMessage = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       createdAt
       updatedAt
@@ -344,43 +188,12 @@ export const onDeleteMessage = /* GraphQL */ `
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
-        routeMaps {
-          nextToken
-        }
-        opportunityProviders {
-          nextToken
-        }
-        opportunities {
-          nextToken
-        }
-        posts {
-          nextToken
-        }
+        profilePic
         interests
         admireBrands
         profileCompleted
         visibleToProviders
         visibleToSeekers
-        friends {
-          nextToken
-        }
-        friendRequests {
-          nextToken
-        }
-        collaborations {
-          nextToken
-        }
-        collaborationMembers {
-          nextToken
-        }
-        conversationMembers {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -390,14 +203,6 @@ export const onDeleteMessage = /* GraphQL */ `
         title
         createdAt
         updatedAt
-        groupId
-        avatar
-        members {
-          nextToken
-        }
-        messages {
-          nextToken
-        }
       }
       createdAt
       updatedAt
@@ -412,32 +217,10 @@ export const onCreateConversation = /* GraphQL */ `
       title
       createdAt
       updatedAt
-      groupId
-      avatar
       members {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       messages {
-        items {
-          id
-          conversationId
-          author
-          body
-          content
-          seekerId
-          type
-          createdAt
-          updatedAt
-        }
         nextToken
       }
     }
@@ -451,32 +234,10 @@ export const onUpdateConversation = /* GraphQL */ `
       title
       createdAt
       updatedAt
-      groupId
-      avatar
       members {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       messages {
-        items {
-          id
-          conversationId
-          author
-          body
-          content
-          seekerId
-          type
-          createdAt
-          updatedAt
-        }
         nextToken
       }
     }
@@ -490,32 +251,10 @@ export const onDeleteConversation = /* GraphQL */ `
       title
       createdAt
       updatedAt
-      groupId
-      avatar
       members {
-        items {
-          id
-          status
-          comment
-          conversationId
-          seekerId
-          createdAt
-          updatedAt
-        }
         nextToken
       }
       messages {
-        items {
-          id
-          conversationId
-          author
-          body
-          content
-          seekerId
-          type
-          createdAt
-          updatedAt
-        }
         nextToken
       }
     }

@@ -10,12 +10,13 @@ const awsAppConfigDevelop = {
   aws_user_pools_web_client_id: '2ubbgtbas91068ja43l0sb9t0c',
   oauth: {},
   aws_appsync_graphqlEndpoint:
-    'https://6dcabl2txbhpfmmh7uctlh6vxa.appsync-api.eu-west-1.amazonaws.com/graphql',
+    'https://zgssv4hp6rgknfayeffnet5sia.appsync-api.eu-west-1.amazonaws.com/graphql',
   aws_appsync_region: 'eu-west-1',
   aws_appsync_authenticationType: 'AMAZON_COGNITO_USER_POOLS',
   aws_user_files_s3_bucket:
     'cm2provider112c74238af64c2ca6103796fed33fd5190632-develop',
   aws_user_files_s3_bucket_region: 'eu-west-1',
-};
+};  
 
 export default awsAppConfigDevelop;
+  

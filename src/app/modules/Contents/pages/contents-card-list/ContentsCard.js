@@ -21,9 +21,9 @@ const ContentsCard = ({ listLoading, entities }) => {
                 <ImageS3
                   className='card-img-top h-225px'
                   alt=' '
-                  photo={entity.photo || entity?.blog?.blogCoverPhoto}
+                  photo={entity.photo   || entity?.blog?.blogCoverPhoto}
                   onError={(e) => {
-                    e.target.onerror = null;
+                    e.target.onerror =   null;
                     e.target.src = toAbsoluteUrl(
                       '/media/routemap-media/false-post.jpg'
                     );

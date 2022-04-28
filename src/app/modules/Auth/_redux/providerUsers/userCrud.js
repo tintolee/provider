@@ -4,9 +4,13 @@ import {
   listOpportunityProviderUsers,
 } from "../../../../../graphql/queries";
 export function getOpportunityProviderUserById(userId) {
-  return API.graphql(
+  const resp = API.graphql(
     graphqlOperation(getOpportunityProviderUser, { id: userId })
   );
+  console.log('logging response from user crud')
+  console.log(resp)
+
+  return resp;
 }
 
 export function getOpportunityProviderUserByEmail(email) {
@@ -34,11 +38,7 @@ export function getOpportunityProviderUserByEmail(email) {
             companyNo
             parent
             email
-            logo {
-              bucket
-              region
-              key
-            }
+            logo
             educationalInstitution
             status
             tagline

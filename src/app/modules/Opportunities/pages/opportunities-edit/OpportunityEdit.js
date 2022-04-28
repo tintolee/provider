@@ -78,6 +78,21 @@ export function OpportunityEdit({
     shallowEqual
   );
 
+  const uploadFile= async (filedata)=>{
+    let formData = new FormData();
+    formData.append("file", filedata);
+    formData.append("upload_preset", "r4v1flgt");
+    const options = {
+      method: "POST",
+      body: formData,
+    };
+   const upload =  await fetch("https://api.Cloudinary.com/v1_1/dw2c6c2hi/image/upload", options)
+      .then((res) => res.json())
+      .then((res) =>  res.secure_url)
+      .catch((err) => console.log(err));
+      return upload
+  }
+
   useEffect(() => {
     console.log("use effect triggered");
     if (opportunityForEdit) {
@@ -159,19 +174,13 @@ export function OpportunityEdit({
 
     if (Object.values(errors).every((val) => val === "valid")) {
       if (values.coverPhoto?.name) {
-        let formData = new FormData();
-        formData.append("file", imagePreview);
-        formData.append("upload_preset", "r4v1flgt");
-        const options = {
-          method: "POST",
-          body: formData,
-        };
-        fetch("https://api.Cloudinary.com/v1_1/drt1ulcak/image/upload", options)
-          .then((res) => res.json())
-          .then((res) => (input.cover = res.secure_url))
-          .catch((err) => console.log(err));
+
+        const coverPhoto = await uploadFile(imagePreview)
+        console.log('logging cover photo')
+        console.log(coverPhoto)
+        input.cover = coverPhoto
       }
-      console.log("no errors");
+      console.log("no errors")
       if (!id) {
         dispatch(actions.createOpportunity(input)).then(() => {
           setLoading(false);

@@ -11,6 +11,7 @@ export function HeaderMobile() {
   const uiService = useHtmlClassService();
   const { user } = useSelector((state) => state.auth, shallowEqual);
 
+
   const layoutProps = useMemo(() => {
     return {
       headerLogo: uiService.getStickyLogo(),

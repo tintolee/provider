@@ -49,6 +49,7 @@ export const deleteCustomer = id => dispatch => {
 };
 
 export const createCustomer = customerForCreation => dispatch => {
+  console.log('from create customer')
   dispatch(actions.startCall({ callType: callTypes.action }));
   return requestFromServer
     .createCustomer(customerForCreation)

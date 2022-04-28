@@ -18,11 +18,7 @@ export function getAllProviderFollowers(providerId, queryParams) {
               dateOfBirth
               biography
               postcodeArea
-              profilePic {
-                bucket
-                key
-                region
-              }
+              profilePic
               routeMaps(filter: $filterRouteMap) {
                 items {
                   id
@@ -68,11 +64,7 @@ export function getSeekerById(seekerId, queryParams) {
         postcodeArea
         dateOfBirth
         biography
-        profilePic {
-          bucket
-          region
-          key
-        }
+        profilePic
         routeMaps(filter: $filterRouteMap) {
           items {
             id
@@ -80,11 +72,7 @@ export function getSeekerById(seekerId, queryParams) {
             status
             destination
             createdAt
-            coverPhoto {
-              region
-              key
-              bucket
-            }
+            coverPhoto
             focusAreas
             posts(filter: $filterPost) {
               items {
@@ -99,21 +87,13 @@ export function getSeekerById(seekerId, queryParams) {
           items {
             id
             caption
-            photo {
-              bucket
-              key
-              region
-            }
+            photo
             type
             createdAt
             blog {
               blogTitle
               blogDescription
-              blogCoverPhoto {
-                bucket
-                region
-                key
-              }
+              blogCoverPhoto
             }
           }
         }
@@ -149,42 +129,22 @@ export function getRouteMapById(routeMapId, queryParams) {
             blog {
               blogTitle
               blogDescription
-              blogCoverPhoto {
-                bucket
-                key
-                region
-              }
+              blogCoverPhoto
             }
-            photo {
-              bucket
-              key
-              region
-            }
-            video {
-              key
-              region
-              bucket
-            }
+            photo
+            video
             createdAt
             visibility
           }
         }
-        coverPhoto {
-          bucket
-          key
-          region
-        }
+        coverPhoto
         focusAreas
         owner {
           firstName
           lastName
           biography
           dateOfBirth
-          profilePic {
-            bucket
-            key
-            region
-          }
+          profilePic
           posts(filter: $filterPost) {
             items {
               id
@@ -228,11 +188,7 @@ export function getRouteMapPostsById(routeMapId, queryParams) {
             blog {
               blogTitle
               blogDescription
-              blogCoverPhoto {
-                bucket
-                key
-                region
-              }
+              blogCoverPhoto
               visibility
             }
             createdAt
@@ -241,34 +197,18 @@ export function getRouteMapPostsById(routeMapId, queryParams) {
               firstName
               lastName
             }
-            photo {
-              bucket
-              key
-              region
-            }
-            video {
-              key
-              region
-              bucket
-            }
+            photo
+            video
           }
         }
-        coverPhoto {
-          bucket
-          key
-          region
-        }
-        focusAreas 
+        coverPhoto
+        focusAreas
         owner {
           firstName
           lastName
           biography
           dateOfBirth
-          profilePic {
-            bucket
-            key
-            region
-          }
+          profilePic
           posts(filter: $filterPost) {
             items {
               id
