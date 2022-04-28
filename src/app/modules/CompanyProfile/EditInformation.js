@@ -29,15 +29,18 @@ function EditInformation(props) {
     shallowEqual
   );
 
+
+  
+
   const uploadFile= async (filedata)=>{
     let formData = new FormData();
     formData.append("file", filedata);
-    formData.append("upload_preset", "r4v1flgt");
+    formData.append("upload_preset", "ogy1h7v9");
     const options = {
       method: "POST",
       body: formData,
     };
-   const upload =  await fetch("https://api.Cloudinary.com/v1_1/drt1ulcak/image/upload", options)
+   const upload =  await fetch("https://api.Cloudinary.com/v1_1/dw2c6c2hi/image/upload", options)
       .then((res) => res.json())
       .then((res) =>  res.secure_url)
       .catch((err) => console.log(err));

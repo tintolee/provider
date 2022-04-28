@@ -42,7 +42,8 @@ export const fetchOpportunity = (id) => (dispatch) => {
       dispatch(actions.opportunityFetched({ opportunityForEdit: opportunity }));
     })
     .catch((error) => {
-      console.log(error);
+      console.log('from actions')
+      console.log(error); 
 
       error.clientMessage = "Can't find opportunity";
       dispatch(actions.catchError({ error, callType: callTypes.action }));
