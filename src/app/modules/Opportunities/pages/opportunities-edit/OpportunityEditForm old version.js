@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { PhotoPicker, S3Image } from "aws-amplify-react";
+import { PhotoPicker } from "aws-amplify-react";
 import { Image, ProgressBar } from "react-bootstrap";
 import {
   Input,
@@ -10,6 +10,7 @@ import {
 } from "../../../../../_metronic/_partials/controls";
 import { resizeFile } from "../../../../utils/FileResizer";
 import { APPLICATIONREQUIRED } from "../OpportunitiesUIHelpers";
+import ImageS3 from "../../../../../app/components/Images/S3Image";
 
 export function OpportunityEditForm({
   opportunity,
@@ -233,12 +234,17 @@ export function OpportunityEditForm({
                     <Image src={imagePreview} fluid />
                   ) : (
                     values.cover && (
-                      <S3Image
-                        imgKey={values.cover.key}
-                        theme={{
-                          photoImg: { maxWidth: "100%", maxHeight: "100%" },
-                        }}
-                      />
+                      <ImageS3
+                      className="card-img-top h-225px"
+                      alt=" "
+                      photo={values.cover}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = toAbsoluteUrl(
+                          "/media/routemap-media/false-post.jpg"
+                        );
+                      }}
+                    />
                     )
                   )}
                 </div>

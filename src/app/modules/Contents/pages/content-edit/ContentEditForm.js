@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { PhotoPicker, S3Image } from "aws-amplify-react";
+import { PhotoPicker } from "aws-amplify-react";
 import { Image, ProgressBar } from "react-bootstrap";
 import { Input, Select } from "../../../../../_metronic/_partials/controls";
 import { resizeFile } from "../../../../utils/FileResizer";
 import { CONTENT_TYPE } from "../ContentsUIHelpers";
 import { VISIBILITY } from "../ContentsUIHelpers";
+import ImageS3 from "../../../../components/Images/S3Image";
+import {toAbsoluteUrl } from "../../../../../_metronic/_helpers";
 
 // Validation schema
 const ContentEditSchema = Yup.object().shape({
@@ -208,15 +210,19 @@ export function ContentEditForm({
                               <Image src={imagePreview} fluid />
                             ) : (
                               values.blogCoverPhoto && (
-                                <S3Image
-                                  imgKey={values.blogCoverPhoto.key}
-                                  theme={{
-                                    photoImg: {
-                                      maxWidth: "100%",
-                                      maxHeight: "100%",
-                                    },
-                                  }}
-                                />
+
+
+                                <ImageS3
+                                className="card-img-top h-225px"
+                                alt=" "
+                                photo={values.blogCoverPhoto}
+                                onError={(e) => {
+                                  e.target.onerror = null;
+                                  e.target.src = toAbsoluteUrl(
+                                    "/media/routemap-media/false-post.jpg"
+                                  );
+                                }}
+                              />
                               )
                             )}
                           </div>
@@ -278,15 +284,18 @@ export function ContentEditForm({
                             <Image src={imagePreview} fluid />
                           ) : (
                             values.photo && (
-                              <S3Image
-                                imgKey={values.photo.key}
-                                theme={{
-                                  photoImg: {
-                                    maxWidth: "100%",
-                                    maxHeight: "100%",
-                                  },
-                                }}
-                              />
+
+                              <ImageS3
+                              className="card-img-top h-225px"
+                              alt=" "
+                              photo={values.photo}
+                              onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = toAbsoluteUrl(
+                                  "/media/routemap-media/false-post.jpg"
+                                );
+                              }}
+                            />
                             )
                           )}
                         </div>

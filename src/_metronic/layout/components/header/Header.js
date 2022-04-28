@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, shallowEqual } from 'react-redux';
-import { S3Image } from 'aws-amplify-react';
 import objectPath from 'object-path';
 import { toAbsoluteUrl } from '../../../_helpers';
 import { useHtmlClassService } from '../../_core/MetronicLayout';
 import { Topbar } from './Topbar';
 import { HeaderMenuWrapper } from './header-menu/HeaderMenuWrapper';
+// import ImageS3 from '..';
 
 export function Header() {
   const uiService = useHtmlClassService();
@@ -42,20 +42,20 @@ export function Header() {
             <div className='header-logo'>
               <Link to='/'>
                 {/* Show Provider logo from DB */}
-                {/* {user && user.provider && user.provider.logo ? (
-                  <S3Image
-                    imgKey={user.provider.logo.key}
-                    theme={{
-                      photoImg: { maxWidth: "100%", maxHeight: "50px" },
-                    }}
-                  />
-                ) : (
-                  <img
-                    className="logo-default max-h-40px"
-                    alt="Logo"
-                    src={toAbsoluteUrl("/media/logos/logo-white.png")}
-                  />
-                )} */}
+                {
+              //   <ImageS3
+              //   className="card-img-top h-225px"
+              //   alt=" "
+              //   photo={user.provider.logo}
+              //   onError={(e) => {
+              //     e.target.onerror = null;
+              //     e.target.src = toAbsoluteUrl(
+              //       "/media/routemap-media/false-post.jpg"
+              //     );
+              //   }}
+              // />
+                
+                }
                 <img
                   className='logo-default max-h-40px'
                   alt='Logo'

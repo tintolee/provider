@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PhotoPicker, S3Image } from "aws-amplify-react";
+import { PhotoPicker } from "aws-amplify-react";
 import { Image } from "react-bootstrap";
 import { resizeFile } from "../../../../utils/FileResizer";
 import DatePicker from "react-datepicker";
@@ -445,12 +445,7 @@ export function OpportunityEditForm({
               <Image src={imagePreview} fluid />
             ) : (
               opportunityValues.coverPhoto && (
-                <S3Image
-                  imgKey={opportunityValues.coverPhoto.key}
-                  theme={{
-                    photoImg: { maxWidth: "100%", maxHeight: "100%" },
-                  }}
-                />
+                ""
               )
             )}
             <label

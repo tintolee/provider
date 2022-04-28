@@ -1,16 +1,15 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, shallowEqual } from "react-redux";
-import { S3Image } from "aws-amplify-react";
 import objectPath from "object-path";
 import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../../_helpers";
 import { useHtmlClassService } from "../../_core/MetronicLayout";
+import ImageS3 from  "../../../../app/components/Images/S3Image"
 
 export function HeaderMobile() {
   const uiService = useHtmlClassService();
   const { user } = useSelector((state) => state.auth, shallowEqual);
-
 
   const layoutProps = useMemo(() => {
     return {
@@ -34,10 +33,15 @@ export function HeaderMobile() {
         {/* begin::Logo */}
         <Link to="/">
           {user && user.provider && user.provider.logo ? (
-            <S3Image
-              imgKey={user.provider.logo.key}
-              theme={{
-                photoImg: { maxWidth: "100%", maxHeight: "40px" },
+            <ImageS3
+              className="card-img-top h-225px"
+              alt=" "
+              photo={user.provider.logo}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = toAbsoluteUrl(
+                  "/media/routemap-media/false-post.jpg"
+                );
               }}
             />
           ) : (

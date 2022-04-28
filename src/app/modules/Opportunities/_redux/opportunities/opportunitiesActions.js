@@ -50,8 +50,6 @@ export const fetchOpportunity = (id) => (dispatch) => {
 };
 
 export const createOpportunity = (opportunityForCreation) => (dispatch) => {
-  console.log(opportunityForCreation.cover)
-  opportunityForCreation.cover ="http://res.cloudinary.com/drt1ulcak/image/upload/v1651150434/g7eb9gbefcjsza3qduyw.png"
 
   dispatch(actions.startCall({ callType: callTypes.action })  );
   return requestFromServer

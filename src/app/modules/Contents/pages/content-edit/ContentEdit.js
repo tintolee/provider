@@ -10,9 +10,8 @@ import {
 } from '../../../../../_metronic/_partials/controls';
 import { ContentEditForm } from './ContentEditForm';
 import { useSubheader } from '../../../../../_metronic/layout';
-import { Storage, Auth } from 'aws-amplify';
+import { Auth } from 'aws-amplify';
 import { ModalProgressBar } from '../../../../../_metronic/_partials/controls';
-import awsAppConfig from '../../../../../awsAppConfig';
 import { useToasts } from 'react-toast-notifications';
 
 let initContent = {
@@ -62,7 +61,7 @@ export function ContentEdit({
   const uploadFile= async (filedata)=>{
     let formData = new FormData();
     formData.append("file", filedata);
-    formData.append("upload_preset", "r4v1flgt");
+    formData.append("upload_preset", "ogy1h7v9");
     const options = {
       method: "POST",
       body: formData,

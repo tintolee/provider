@@ -1,7 +1,8 @@
 /* eslint-disable no-script-url,jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Card } from "react-bootstrap";
-import { S3Image } from "aws-amplify-react";
+import  ImageS3 from "../../../../../../app/components/Images/S3Image";
+import {toAbsoluteUrl} from "../../../../../../_metronic/_helpers";
 
 export function OtherProviderCard({ provider }) {
   return (
@@ -11,10 +12,19 @@ export function OtherProviderCard({ provider }) {
           <div className="flex-shrink-0 mr-7 mt-lg-0 mt-3">
             <div>
               {provider.logo && (
-                <S3Image
-                  imgKey={provider.logo.key}
-                  theme={{ photoImg: { maxWidth: '250px', maxHeight: '300px' } }}
-                />
+
+                <ImageS3
+                className="card-img-top h-225px"
+                alt=" "
+                photo={provider.logo}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = toAbsoluteUrl(
+                    "/media/routemap-media/false-post.jpg"
+                  );
+                }}
+              />
+                
               )}
             </div>
           </div>

@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useSelector, shallowEqual, connect, useDispatch } from 'react-redux';
 import Select from 'react-select';
 import { Image } from 'react-bootstrap';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Auth, Storage } from 'aws-amplify';
-import { PhotoPicker, S3Image } from 'aws-amplify-react';
+import { PhotoPicker } from 'aws-amplify-react';
 import { ModalProgressBar } from '../../../_metronic/_partials/controls';
 import { toAbsoluteUrl } from '../../../_metronic/_helpers';
 import { resizeFile } from '../../utils/FileResizer';
 import * as auth from '../Auth';
 import * as actions from './_redux/providers/providersActions';
-import awsAppConfig from '../../../awsAppConfig';
 import * as providerSectorsActions from './_redux/providerSectors/providerSectorsActions';
+import ImageS3 from  "../../../app/components/Images/S3Image";
 
 function EditInformation(props) {
   // Fields
@@ -234,12 +232,19 @@ function EditInformation(props) {
                     <Image src={imagePreview} fluid />
                   ) : (
                     formik.values.logo && (
-                      <S3Image
-                        imgKey={formik.values.logo.key}
-                        theme={{
-                          photoImg: { maxWidth: '100%', maxHeight: '100%' },
-                        }}
-                      />
+
+                      <ImageS3
+                      className="card-img-top h-225px"
+                      alt=" "
+                      photo={formik.values.logo}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = toAbsoluteUrl(
+                          "/media/routemap-media/false-post.jpg"
+                        );
+                      }}
+                    />
+
                     )
                   )}
                 </div>

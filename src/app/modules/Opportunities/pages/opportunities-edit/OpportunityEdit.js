@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { shallowEqual, useSelector } from "react-redux";
-import { Storage, Auth } from "aws-amplify";
 import * as actions from "../../_redux/opportunities/opportunitiesActions";
 import * as opportunityTypesActions from "../../_redux/opportunityTypes/opportunityTypesActions";
 import * as userActions from "../../../Auth/_redux/providerUsers/userActions";
@@ -13,7 +12,6 @@ import {
 } from "../../../../../_metronic/_partials/controls";
 import { useSubheader } from "../../../../../_metronic/layout";
 import { ModalProgressBar } from "../../../../../_metronic/_partials/controls";
-import awsAppConfig from "../../../../../awsAppConfig";
 import { AttendeesUIProvider } from "../opportunities-attendees/AttendeesUIContext";
 import { Attendees } from "../opportunities-attendees/Attendees";
 import { OpportunityEditForm } from "./OpportunityEditForm";
@@ -22,9 +20,9 @@ import SVG from "react-inlinesvg";
 import { toAbsoluteUrl } from "../../../../../_metronic/_helpers";
 import moment from "moment";
 import { Image } from "react-bootstrap";
-import { S3Image } from "aws-amplify-react";
-import { values } from "lodash";
 import { useToasts } from "react-toast-notifications";
+
+import ImageS3 from "../../../../../app/components/Images/S3Image";
 
 export function OpportunityEdit({
   history,
@@ -81,7 +79,7 @@ export function OpportunityEdit({
   const uploadFile= async (filedata)=>{
     let formData = new FormData();
     formData.append("file", filedata);
-    formData.append("upload_preset", "r4v1flgt");
+    formData.append("upload_preset", "ogy1h7v9");
     const options = {
       method: "POST",
       body: formData,
@@ -176,12 +174,11 @@ export function OpportunityEdit({
       if (values.coverPhoto?.name) {
 
         const coverPhoto = await uploadFile(imagePreview)
-        console.log('logging cover photo')
-        console.log(coverPhoto)
         input.cover = coverPhoto
       }
       console.log("no errors")
       if (!id) {
+        console.log(input)
         dispatch(actions.createOpportunity(input)).then(() => {
           setLoading(false);
           backToOpportunitiesList("created");
@@ -443,12 +440,18 @@ export function OpportunityEdit({
                     <Image src={imagePreview} fluid />
                   ) : (
                     opportunityValues.coverPhoto && (
-                      <S3Image
-                        imgKey={opportunityValues.coverPhoto.key}
-                        theme={{
-                          photoImg: { maxWidth: "100%", maxHeight: "100%" },
-                        }}
-                      />
+
+                      <ImageS3
+                      className="card-img-top h-225px"
+                      alt=" "
+                      photo={opportunityValues.coverPhoto}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = toAbsoluteUrl(
+                          "/media/routemap-media/false-post.jpg"
+                        );
+                      }}
+                    />
                     )
                   )}
                 </div>
